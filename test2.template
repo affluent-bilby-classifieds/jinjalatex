@@ -1,0 +1,18 @@
+{% extends "jinja-test.template" %}
+
+{% block content %}
+ My string: \VAR{my_string}
+
+
+ Value from the list: \VAR{my_list[3]}
+
+ Loop through the list:
+\begin{itemize}
+\item 
+{% for n in my_list %}
+\VAR{n}
+\end{itemize}
+
+{% endblock %}
+
+
