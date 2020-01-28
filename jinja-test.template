@@ -72,7 +72,8 @@ default:\quad
   \end{pspicture}
 
 \section{\VAR{section8}}
- {% block content %}{% endblock %}
+
+\BLOCK{block content}\BLOCK{endblock}
 
 \end{document}
 

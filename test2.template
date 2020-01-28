@@ -1,18 +1,24 @@
-{% extends "jinja-test.template" %}
 
-{% block content %}
+
+\BLOCK{ extends "jinja-test.template" }
+
+\BLOCK{block content}
+This provides you some additional text from the child block.
+
+
+\BLOCK{ block content }
  My string: \VAR{my_string}
 
 
- Value from the list: \VAR{my_list[3]}
 
- Loop through the list:
+Loop through the list:
 \begin{itemize}
-\item 
-{% for n in my_list %}
+\item
+\BLOCK{ for n in my_list }
 \VAR{n}
+\BLOCK{ endfor }
+
 \end{itemize}
 
-{% endblock %}
 
-
+\BLOCK{ endblock }
