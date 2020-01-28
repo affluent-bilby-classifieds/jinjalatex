@@ -30,7 +30,7 @@ latex_jinja_env = jinja2.Environment(
 template = latex_jinja_env.get_template('jinja-test.template')
 print(template.render(section1='Long Form', section2='Short Form', section3='tcolorbox', section4="SQL query : %s " % data, section5='SQL query inside tcolorbox', section6='QR code', section7='pst-barcode Micro QR code',section8='attempt to render child template'))
 
-#template2 = latex_jinja_env.get_template('test2.template')
+template2 = latex_jinja_env.get_template('test2.template')
 
 #print(template2.render(my_string='Wheeeee!', my_list=[0,1,2,3,4,5]))
 
