@@ -6,7 +6,7 @@
 This provides you some additional text from the child block.
 
 
-\BLOCK{ block content }
+
  My string: \VAR{my_string}
 
 
@@ -21,4 +21,4 @@ Loop through the list:
 \end{itemize}
 
 
-\BLOCK{ endblock }
+\BLOCK{endblock}
