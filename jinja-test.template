@@ -48,11 +48,10 @@ An example document using \LaTeX, Python, and Jinja.
 
 \section{\VAR{section5}}
 %# This is a sql database query output inside the tcolorbox
-\begin{itemize}
-%% for x in range(0, 3)
-  \item Counting: \VAR{x}
-%% endfor
-\end{itemize}
+
+\begin{equation}
+\tcbhighmath[autowidth title=Smart Phone]{\VAR{data1}}
+\end{equation}
 
 \section{\VAR{section6}}
 %# This is a QR code
