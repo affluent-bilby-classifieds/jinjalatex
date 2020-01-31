@@ -74,6 +74,28 @@ default:\quad
 
 \BLOCK{block content}\BLOCK{endblock}
 
+
+\section{\VAR{section9}}
+
+  \begin{tcolorbox}[space to upper,
+        skin=bicolor,
+        colbacklower=black!75,
+        collower=white,
+        title={Top Title},
+        halign=center,
+        valign=center,
+        nobeforeafter,
+        halign lower=flush right,
+        bottom=0mm,
+        height=3cm
+    ]
+        
+        \VAR{data1}
+
+        \tcblower
+        End-Title
+    \end{tcolorbox}%
+
 \end{document}
 
 
