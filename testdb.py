@@ -2,6 +2,7 @@
 import jinja2
 import os
 import MySQLdb
+
 connection = MySQLdb.connect("localhost","test","password")
 cursor = connection.cursor()
 
@@ -9,7 +10,7 @@ cursor = connection.cursor()
 # execute SQL query using execute() method.
 cursor.execute("SELECT VERSION()")
 # Fetch a single row using fetchone() method.
-data = cursor.fetchone()
+data = cursor.fetchone()[0]
 cursor.close()
 connection.close()
 
@@ -27,10 +28,12 @@ latex_jinja_env = jinja2.Environment(
 	autoescape = False,
 	loader = jinja2.FileSystemLoader(os.path.abspath('.'))
 )
-template = latex_jinja_env.get_template('test2.template')
-print(template.render(section1='Long Form', section2='Short Form', section3='tcolorbox', section4="SQL query : %s " % data, section5='SQL query inside tcolorbox', section6='QR code', section7='pst-barcode Micro QR code',section8='attempt to render child template',my_string='Wheeeee!', my_list=[0,1,2,3,4,5]))
 
-#template2 = latex_jinja_env.get_template('test2.template')
+template = latex_jinja_env.get_template('test2.template')
+
+print(template.render(section1='Long Form', section2='Short Form', section3='tcolorbox', section4="SQL query : %s " % data, section5='SQL query inside tcolorbox', section6='QR code', section7='pst-barcode Micro QR code',section8='attempt to render child template',my_string='Wheeeee!', my_list=[0,1,2,3,4,5], data1=data, section9='Another tcolorbox example'))
+
+
 
 #print(template2.render(my_string='Wheeeee!', my_list=[0,1,2,3,4,5]))
 
