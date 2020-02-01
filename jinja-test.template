@@ -2,7 +2,11 @@
 \usepackage[many]{tcolorbox}
 \usepackage{qrcode}
 \usepackage{pst-barcode,fancyvrb}
+\usepackage{graphicx}
 
+
+\DeclareGraphicsExtensions{.pdf,.png}
+\graphicspath{ {./images/} }
 
 \pgfkeysdef{/tcb/autowidth title}{
     \pgfmathwidth{"#1"}
@@ -95,6 +99,38 @@ default:\quad
         \tcblower
         End-Title
     \end{tcolorbox}%
+
+\section{\VAR{section10}}
+
+ \begin{tcolorbox}[space to upper,
+        skin=bicolor,
+        colbacklower=black!75,
+        collower=white,
+        title={Top Title},
+        halign=center,
+        valign=center,
+        nobeforeafter,
+        halign lower=flush right,
+        bottom=0mm,
+        height=3cm
+    ]
+        
+        \VAR{data1}
+
+       
+\begin{pspicture}(0.5in,0.5in)
+    \psbarcode{test string}{}{microqrcode}
+  \end{pspicture}
+
+ \tcblower
+        
+
+    \end{tcolorbox}%
+
+\section{\VAR{section11}}
+\includegraphics{classifiedexample.ps}
+
+
 
 \end{document}
 

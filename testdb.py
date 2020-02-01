@@ -3,6 +3,7 @@ import jinja2
 import os
 import MySQLdb
 
+
 connection = MySQLdb.connect("localhost","test","password")
 cursor = connection.cursor()
 
@@ -31,14 +32,9 @@ latex_jinja_env = jinja2.Environment(
 
 template = latex_jinja_env.get_template('test2.template')
 
-print(template.render(section1='Long Form', section2='Short Form', section3='tcolorbox', section4="SQL query : %s " % data, section5='SQL query inside tcolorbox', section6='QR code', section7='pst-barcode Micro QR code',section8='attempt to render child template',my_string='Wheeeee!', my_list=[0,1,2,3,4,5], data1=data, section9='Another tcolorbox example'))
+print(template.render(section1='Long Form', section2='Short Form', section3='tcolorbox', section4="SQL query : %s " % data, section5='SQL query inside tcolorbox', section6='QR code', section7='pst-barcode Micro QR code',section8='attempt to render child template',my_string='Wheeeee!', my_list=[0,1,2,3,4,5], data1=data, section9='Another tcolorbox example with SQL query.', section10='SQL, tcolorbox, microQR code', section11='Screenshot of example classified ad'))
 
 
 
-#print(template2.render(my_string='Wheeeee!', my_list=[0,1,2,3,4,5]))
-
-#render_template(
-#        'template.html', my_string="Wheeeee!",
-#        my_list=[0,1,2,3,4,5], title="Home")
 
 
