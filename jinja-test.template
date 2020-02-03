@@ -3,10 +3,12 @@
 \usepackage{qrcode}
 \usepackage{pst-barcode,fancyvrb}
 \usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{multicol}
 
 
 \DeclareGraphicsExtensions{.pdf,.png}
-\graphicspath{ {./images/} }
+\graphicspath{ {../images/} }
 
 \pgfkeysdef{/tcb/autowidth title}{
     \pgfmathwidth{"#1"}
@@ -128,8 +130,54 @@ default:\quad
     \end{tcolorbox}%
 
 \section{\VAR{section11}}
-\includegraphics{classifiedexample.ps}
+\includegraphics{exampleclassified.ps}
 
+\section{\VAR{section12}}
+
+\begin{tcolorbox}[space to upper,
+        skin=bicolor,
+        colbacklower=black!75,
+        collower=white,
+        title={Top Title},
+        halign=center,
+        valign=center,
+        nobeforeafter,
+        halign lower=flush right,
+        bottom=0mm,
+        height=3cm
+    ]
+        
+        \VAR{data1}
+
+        \tcblower
+        End-Title
+    \end{tcolorbox}%
+
+\section{\VAR{section13}}
+
+\begin{minipage}[t]{0.3\textwidth}
+ \$ CASH \$ For Broken Autos.
+        Paying \$50 to \$500. I Tow!
+        Call Doug Anytime 7-Days,
+        (269)501-5763. 
+        \noindent\rule{3.8cm}{0.8pt}
+\end{minipage}
+
+\section{\VAR{section14}}
+
+\begin{minipage}[t]{0.3\textwidth}
+ \$ CASH \$ For Broken Autos.
+        Paying \$50 to \$500. I Tow!
+        Call Doug Anytime 7-Days,
+	(269)501-5763. 
+
+\begin{pspicture}(0.5in,0.5in)
+    \psbarcode{test string}{}{microqrcode}
+  \end{pspicture}
+        
+
+        \noindent\rule{3.8cm}{0.8pt}
+\end{minipage}
 
 
 \end{document}
