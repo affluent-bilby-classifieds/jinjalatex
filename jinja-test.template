@@ -180,6 +180,21 @@ default:\quad
 \end{minipage}
 
 
+\section{\VAR{section15}}
+
+\begin{minipage}[t]{0.3\textwidth}
+ \$ CASH \$ For Broken Autos.
+        Paying \$50 to \$500. I Tow!
+        Call Doug Anytime 7-Days,
+	(269)501-5763. 
+\includegraphics{1.ps}
+
+        
+
+        \noindent\rule{3.8cm}{0.8pt}
+\end{minipage}
+
+
 \end{document}
 
 
